@@ -1,0 +1,18 @@
+{% autoescape off %}
+
+Bonjour {{ name }}
+Bienvenue sur TechWork, votre plateforme de recrutement dédiée à la technologie. Pour commencer, veuillez vérifier votre compte en cliquant sur le lien ci-dessous :
+
+lien: <a href="{{ domain }}{% url 'activate' uidb64=uid token=token %}">Activer le compte</a>
+
+
+Ce lien de vérification vous permettra d'accéder à toutes les fonctionnalités de TechWork et de bénéficier des opportunités d'emploi exclusives dans le domaine technologique.
+
+Si vous avez des questions ou avez besoin d'assistance, n'hésitez pas à contacter notre équipe de support.
+
+Nous sommes impatients de vous accompagner dans votre recherche d'emploi sur TechWork !
+
+Cordialement,
+
+L'équipe de TechWork
+{% endautoescape %}
