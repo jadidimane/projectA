@@ -1,0 +1,28 @@
+{% extends 'root.html' %}
+{% block titre %}Se Connecter{% endblock %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/agent_login.css">
+  </head>
+
+
+<div class="container">
+  <h4>Connectez-Vous</h4>
+  {% for message in messages %}
+    <strong>{{ message }}</strong>
+  {% endfor %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <fieldset>
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" placeholder="Entrer Votre Username" required>
+      <br><br>
+      <label for="mot_de_passe">Mot de Passe:</label>
+      <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Entrer Votre Mot de Passe" required>
+      <br><br>
+      <button type="submit">Connecter</button>
+    </fieldset>
+  </form>
+</div>
+{% endblock %}

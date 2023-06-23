@@ -1,0 +1,41 @@
+{% extends 'root.html' %}
+{% block titre %} S'Inscrire {% endblock %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/static/candidat_register.css">
+</head>
+
+<div class="container">
+  <h4> Inscrivez-vous </h4>
+   {% for message in messages %}
+     <strong>{{ message }}</strong>
+   {% endfor %}
+  <table>
+    <form action="{% url 'register_agent' %}" method="post">
+      {% csrf_token %}
+      <fieldset>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" placeholder="Entrer Votre Username" required>
+        <br> <br>
+        <label for="nom">Nom:</label>
+        <input type="text" name="nom" id="nom" placeholder="Entrer Votre Nom" required>
+        <br><br>
+        <label for="prenom">Prenom:</label>
+        <input type="text" name="prenom" id="prenom" placeholder="Enter Votre Prenom" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Entrer Votre Email" required>
+        <br><br>
+        <label for="mot_de_passe">Mot de Passe:</label>
+        <input type="password" name="mot_de_passe" id="mot_de_passe" placeholder="Entrer Votre Mot de Passe" required>
+        <br><br>
+        <label for="mot_de_passe1">Comfirme Mot de Passe:</label>
+        <input type="password" name="mot_de_passe1" id="mot_de_passe1" placeholder="Confirmer Votre Mot de Passe" required>
+        <br><br>
+        <button type="submit">Enregistrer</button>
+      </fieldset>
+    </form>
+  </table>
+</div>
+{% endblock %}
