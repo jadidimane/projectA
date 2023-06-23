@@ -1,0 +1,24 @@
+{% extends 'root.html' %}
+{% block content %}
+
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/offer_postula.css">
+</head>
+
+
+<center class="content-center">
+    <h1 class="content-h1">{{ offre.titre }}</h1>
+    <p class="content-p">{{ offre.datepub }}</p>
+    <h1 class="content-h1">description</h1>
+    <p class="content-p">{{ offre.description }}</p>
+    <h1 class="content-h1">competences</h1>
+    <p class="content-p">{{ offre.competences}}</p>
+    <p class="content-p">{{ offre.localisation }}</p>
+    <p class="content-p">{{ offre.type_contrat }}</p>
+    <p class="content-p">{{ offre.experience }}</p>
+    <p class="content-p">{{ offre.email_recruteur}}</p>
+<a href="{% url 'candidatur' %}" class="content-a">postuler</a>
+</center>
+
+{% endblock%}

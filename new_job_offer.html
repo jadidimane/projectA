@@ -1,0 +1,14 @@
+{% extends 'root.html' %}
+
+{% block content %}
+
+<strong><h1>add new job offer</h1></strong>
+<table><form action="" method='post' enctype='multipart/form-data'>
+    {% csrf_token %}
+    {{ of.as_table }}
+    <button type="submit">Add a job offer </button>  
+</form></table>
+
+
+
+{%  endblock %}

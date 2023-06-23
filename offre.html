@@ -1,0 +1,16 @@
+{% extends 'root.html' %}
+{% block content %}
+<center></center>
+<h1>{{ offre.titre }}</h1>
+<p>{{ offre.datepub }}</p>
+<h1>description</h1>
+<p>{{ offre.description }}</p>
+<h1>competences</h1>
+<p>{{ offre.competences}}</p>
+<p>{{ offre.localisation }}</p>
+<p>{{ offre.type_contrat }}</p>
+<p>{{ offre.experience }}</p>
+<p>{{ offre.email_recruteur}}</p>
+</center>
+
+{% endblock%}

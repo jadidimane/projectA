@@ -1,0 +1,14 @@
+{% extends 'root.html' %}
+
+
+
+{% block content %}
+<strong><h1>Update a Job Offer</h1></strong>
+<table>
+<form action="{% url 'edit_offer' offer.id %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ uf.as_table }}
+  <button type="submit">Update Your Offer</button>
+</form>
+</table>
+{% endblock %}

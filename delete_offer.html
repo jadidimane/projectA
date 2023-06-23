@@ -1,0 +1,16 @@
+{% extends 'root.html' %}
+{% block title %} job offer list {% endblock %}
+{% block content %}
+<h1>Delete product:</h1>
+
+    <form action="{% url 'delete_offer' offre.id %}" method='post'>
+        {% csrf_token %}
+        <p>Are you sure you want to delete the offer "{{offre.titre}}"?</p>
+      <div>
+        <button type="submit">Yes, Delete</button>
+        <a href="{% url 'job_offers' %}">Cancel</a>
+      </div>
+    </form>
+
+    
+{% endblock %}

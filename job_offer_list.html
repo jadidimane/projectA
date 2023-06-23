@@ -1,0 +1,22 @@
+{% extends 'root.html' %}
+{% block content %}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/job_offer_list.css">
+  </head>
+  <h3>Listes Des Offres</h3>
+  <br>
+  <br>
+<div class="offer-list">
+    {% for offre in offres %}
+        <div class="card">
+            <h2 class="offre-title">Titre de l'offre: {{ offre.title }}</h2>
+            <p class="offre-description">Description de l'offre: {{ offre.description }}</p>
+            <p class="offre-date">Date de publication: {{ offre.datepub }}</p>
+            <a href="{% url 'postuler_offre' offre.id %}" class="offre-link">Voir plus</a>
+        </div>
+    {% empty %}
+        <p>Aucune offre n'est trouvée </p>
+    {% endfor %}
+</div>
+{% endblock %}
