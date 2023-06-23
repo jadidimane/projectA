@@ -1,0 +1,48 @@
+
+
+.offer-list {
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 600px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.offre-title {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.offre-description {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.offre-date {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.offre-link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.offre-link:hover {
+    background-color: #1a1919;
+}

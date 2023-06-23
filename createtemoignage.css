@@ -1,0 +1,33 @@
+
+
+
+form {
+    max-width: 400px; 
+    margin: 20px auto; 
+}
+
+form p {
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1a1919;
+}

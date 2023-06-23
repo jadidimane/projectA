@@ -1,78 +1,66 @@
-/* style.css */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-* {
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color:#4d3a3a;
-
-}
-
-div.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 30px 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10000;
-}
-
-header .logo {
-  color: black;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 2em;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 30px;
-}
-
-header ul {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  list-style-type: none;
-  float: right;
-  margin-top: 30px;
-}
-
-header ul li {
-  list-style: none;
-  margin-left: 20px;
-}
-
-header ul li a {
-  text-decoration: none;
-  padding: 6px 15px;
-  color: #4b3838;
-  border-radius: 20px;
-}
-
-header ul li a:hover,
-header ul li a.active {
-  background-color: black;
-  color: white;
-}
-
-.container {
-  background-color:#4d3a3a;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+.container {
+  flex: 1;
+}
+
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+  background-color: #666;
+  color: #f5f5f5;
+  text-decoration: none;
+}
 .content {
   flex: 1;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 header form {
@@ -103,6 +91,11 @@ header form button {
 header form button:hover {
   background-color: #7597de;
 }
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+
 .content{
     background-color: rgb(22, 22, 22);
     color: white;
@@ -110,10 +103,22 @@ header form button:hover {
     animation-duration: 2.0s;
 }
 .footer-dark {
-    padding:50px 0;
-    color:#f0f9ff;
-    background-color:#282d32;
+    
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 50px 0;
+  color: #f0f9ff;
+  background-color: #282d32;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
 }
+
+
   
 .footer-dark h3 {
     margin-top:0;
@@ -187,7 +192,7 @@ header form button:hover {
     opacity:0.75;
 }
   
-  .footer-dark .item.social > a:hover {
+.footer-dark .item.social > a:hover {
     opacity:0.9;
 }
   
@@ -203,5 +208,6 @@ header form button:hover {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background-color:#282d32;}
+    width: 50%;
+    background-color:#030303;
+}
