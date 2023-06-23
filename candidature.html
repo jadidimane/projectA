@@ -1,0 +1,19 @@
+{% extends 'root.html' %}
+{% block content %}
+<head>
+    <link rel="stylesheet" type="text/css" href="/static/candidature.css">
+  </head>
+  <h3>Envoyer Votre Candidature</h3>
+
+  <br>
+  <br>
+  <div class="form-container">
+
+   
+    <form method="POST" action="{% url 'candidature_avec_succes' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="form-control-submit">Soumettre</button>
+    </form>
+</div>
+{% endblock %}
